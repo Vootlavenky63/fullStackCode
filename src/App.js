@@ -7,8 +7,8 @@ export default function App() {
   return (
     <div>
 
-      <Com3 setfrog={setfrog}/>
-      {frog}
+      <Com3 />
+      {/* {frog} */}
       {/* <h1>
         Start new. 
         Ask if you have doubts

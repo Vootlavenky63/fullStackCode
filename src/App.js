@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from 'react'
+import Comp2 from './Comp2';
+import Com3 from './Com3';
 
-function App() {
+export default function App() {
+  const [frog, setfrog] = useState("I am in App.js")
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <div>
 
-export default App;
+      <Com3 setfrog={setfrog}/>
+      {frog}
+      {/* <h1>
+        Start new. 
+        Ask if you have doubts
+
+      </h1>
+        {frog}
+      <Comp2 frog={frog} setfrog={setfrog}/> */}
+    </div>
+  )
+}

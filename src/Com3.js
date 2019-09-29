@@ -9,7 +9,7 @@ function App() {
   const getData = () => {
     // axios
     //   .get("http://localhost:8080")
-      axios.post('/user', {
+      axios.post('/songs', "http://localhost:8080",{
         title: 'Fred',
         singer: 'Flintstone',
         listen:true
@@ -40,3 +40,19 @@ function App() {
 }
 
 export default App;
+import React, { useState } from "react";
+
+export default function App() {
+  const [name, setname] = useState("venky");
+  const [name2, setname2] = useState("Avinash");
+  const [what, setwhat] = useState(true);
+  return (
+    <div>
+      
+      <button onClick={()=>setwhat(!what)}>Toggle</button>
+      <h1>{what?<h1>{name}</h1>:<h1>{name2}</h1>}</h1>
+
+
+    </div>
+  );
+}
